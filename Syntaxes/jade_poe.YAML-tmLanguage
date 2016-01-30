@@ -1,0 +1,31 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+name: Jade (Poe)
+scopeName: source.poe.jade
+fileTypes: ["jade"]
+uuid: b06de406-ef0e-46cf-b978-390719908dd3
+
+patterns:
+- comment: module docstring
+  name: comment.unbuffered.block.jade
+  begin: ^\:doc
+  end: ^(?!(\1\s)|\s*$)
+- comment: module code
+  name: source.js
+  begin: ^\:module
+  end: ^(?!(\1\s)|\s*$)
+  patterns:
+  - include: source.js
+- comment: test code
+  name: source.js
+  begin: ^\:test
+  end: ^(?!(\1\s)|\s*$)
+  patterns:
+  - include: source.js
+- comment: export dot
+  name: source.js
+  begin: ^export\.\n
+  end: ^(?!(\1\s)|\s*$)
+  patterns:
+  - include: source.js
+
+- include: text.jade

@@ -1,0 +1,10 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: ESS
+scopeName: source.ess
+fileTypes: ["ess"]
+uuid: 2e910a46-0b37-46de-88df-e1dcf35b88d8
+
+patterns:
+- include: source.stylus
+...

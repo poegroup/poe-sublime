@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>jade</string>
+	</array>
+	<key>name</key>
+	<string>Jade (Poe)</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>^\:doc</string>
+			<key>comment</key>
+			<string>module docstring</string>
+			<key>end</key>
+			<string>^(?!(\1\s)|\s*$)</string>
+			<key>name</key>
+			<string>comment.unbuffered.block.jade</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^\:module</string>
+			<key>comment</key>
+			<string>module code</string>
+			<key>end</key>
+			<string>^(?!(\1\s)|\s*$)</string>
+			<key>name</key>
+			<string>source.js</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^\:test</string>
+			<key>comment</key>
+			<string>test code</string>
+			<key>end</key>
+			<string>^(?!(\1\s)|\s*$)</string>
+			<key>name</key>
+			<string>source.js</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^export\.\n</string>
+			<key>comment</key>
+			<string>export dot</string>
+			<key>end</key>
+			<string>^(?!(\1\s)|\s*$)</string>
+			<key>name</key>
+			<string>source.js</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>text.jade</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.poe.jade</string>
+	<key>uuid</key>
+	<string>b06de406-ef0e-46cf-b978-390719908dd3</string>
+</dict>
+</plist>
