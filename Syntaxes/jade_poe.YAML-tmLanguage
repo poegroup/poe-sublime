@@ -15,6 +15,12 @@ patterns:
   end: ^(?!(\1\s)|\s*$)
   patterns:
   - include: source.js
+- comment: js code
+  name: source.js
+  begin: ^\:js
+  end: ^(?!(\1\s)|\s*$)
+  patterns:
+  - include: source.js
 - comment: test code
   name: source.js
   begin: ^\:test
